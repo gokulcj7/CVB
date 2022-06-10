@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Admin</web-resource-name>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+			<role-name>user</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
+	<security-role>
+		<role-name>admin</role-name>
+	</security-role>
+	
+	<security-role>
+		<role-name>user</role-name>
+	</security-role>
+	
+	<servlet>
+	<servlet-name>Otp</servlet-name>
+	<servlet-class>Otp</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Otp</servlet-name>
+		<url-pattern>/Otp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Selectall</servlet-name>
+		<servlet-class>Selectall</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Selectall</servlet-name>
+		<url-pattern>/Selectall</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Delete</servlet-name>
+		<servlet-class>Delete</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Delete</servlet-name>
+		<url-pattern>/Delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Update</servlet-name>
+		<servlet-class>Update</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Update</servlet-name>
+		<url-pattern>/Update</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Selectall2</servlet-name>
+		<servlet-class>Selectall2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Selectall2</servlet-name>
+		<url-pattern>/Selectall2</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/LogoutServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Insert</servlet-name>
+		<servlet-class>Insert</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Insert</servlet-name>
+		<url-pattern>/Insert</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Val</servlet-name>
+		<servlet-class>Val</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Val</servlet-name>
+		<url-pattern>/Val</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Ajax</servlet-name>
+		<servlet-class>Ajax</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Ajax</servlet-name>
+		<url-pattern>/Ajax</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Location</servlet-name>
+		<servlet-class>Location</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Location</servlet-name>
+		<url-pattern>/Location</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SignUp</servlet-name>
+		<servlet-class>SignUp</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignUp</servlet-name>
+		<url-pattern>/SignUp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>id</servlet-name>
+		<servlet-class>Demo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>id</servlet-name>
+		<url-pattern>/Ajax/*</url-pattern>
+	</servlet-mapping>
+
+	
+  <welcome-file-list>  
+   <welcome-file>index.jsp</welcome-file>   
+  </welcome-file-list>
+
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/login.html</form-login-page>
+			<form-error-page>/error.html</form-error-page>
+		</form-login-config>
+	</login-config>
+	
+</web-app>

@@ -1,0 +1,97 @@
+
+
+<html>
+<head>
+  <script type="text/javascript">
+
+    function loadAjax()
+    {
+        var table = document.getElementById("data");
+        for (var i = 0, row; row = table.rows[i]; i++) 
+        {
+           for (var j = 0, col; col = row.cells[j]; j++) {
+            const inputElement = col.querySelector('input');
+        //just in case there's no input element inside the td
+            if (inputElement !== null){
+              const value = inputElement.value;
+              console.log( value );
+            }        
+          }  
+        }
+      }
+  </script>
+</head>
+<body>
+<table id="data">
+   <tr>
+      <td>
+          <input type="text" name="id" id="id" value="<%=rn%>">
+      </td>
+      <td>
+          <input type="text" name="name" id="name" value="<%=na%>">
+      </td>
+      <td>
+          <input type="text" name="location" id="location" value="<%=pe%>">
+      </td>
+      <td>
+          <input type="text" name="nbed" id="nbed" value="<%=ad%>">
+      </td>
+      <td>
+          <input type="text" name="obed" id="obed" value="<%=obed%>">
+      </td>
+      <td>
+          <input type="text" name="ibed" id="ibed" value="<%=ibed%>">
+      </td>
+      <td>
+          <button onclick="loadAjax()">submit </button>
+      </td>   
+   </tr>
+   <tr>
+      <td>
+          <input type="text" name="id" id="id" value="<%=rn%>">
+      </td>
+      <td>
+          <input type="text" name="name" id="name" value="<%=na%>">
+      </td>
+      <td>
+          <input type="text" name="location" id="location" value="<%=pe%>">
+      </td>
+      <td>
+          <input type="text" name="nbed" id="nbed" value="<%=ad%>">
+      </td>
+      <td>
+          <input type="text" name="obed" id="obed" value="<%=obed%>">
+      </td>
+      <td>
+          <input type="text" name="ibed" id="ibed" value="<%=ibed%>">
+      </td>
+      <td>
+          <button onclick="loadAjax()">submit </button>
+      </td>   
+   </tr>
+   <tr>
+      <td>
+          <input type="text" name="id" id="id" value="<%=rn%>">
+      </td>
+      <td>
+          <input type="text" name="name" id="name" value="<%=na%>">
+      </td>
+      <td>
+          <input type="text" name="location" id="location" value="<%=pe%>">
+      </td>
+      <td>
+          <input type="text" name="nbed" id="nbed" value="<%=ad%>">
+      </td>
+      <td>
+          <input type="text" name="obed" id="obed" value="<%=obed%>">
+      </td>
+      <td>
+          <input type="text" name="ibed" id="ibed" value="<%=ibed%>">
+      </td>
+      <td>
+          <button onclick="loadAjax()">submit </button>
+      </td>   
+   </tr>
+</table>
+
+</body>
